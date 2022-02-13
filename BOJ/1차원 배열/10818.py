@@ -4,6 +4,7 @@ import sys
 input = sys.stdin.readline
 
 if __name__ == "__main__":
-    y = int(input())
-
-    print(1 if (y % 4 == 0 and y % 100 != 0) or y % 400 == 0 else 0)
+    n = int(input())
+    l = list(map(int, input().strip().split()))
+    
+    print(f"{min(l)} {max(l)}")
