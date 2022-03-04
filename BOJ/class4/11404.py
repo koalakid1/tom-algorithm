@@ -28,5 +28,3 @@ if __name__ == "__main__":
             else:
                 print(graph[x][y], end=" ")
         print()
-
-    print(*graph)
