@@ -12,6 +12,7 @@ import sys
 input = sys.stdin.readline
 
 
+if __name__ == "__main__":
     n = int(input())
     graph = [tuple(map(int, input().strip().split())) for _ in range(n)]
     dp = [[0 for _ in range(n)] for _ in range(n)]
