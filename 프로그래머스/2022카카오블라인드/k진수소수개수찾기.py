@@ -20,5 +20,11 @@ def prime(n):
 
 def solution(n, k):
     n = k_base(n, k)
+    n_list = n.split("0")
 
-    return m
+    ans = 0
+    for num in n_list:
+        if num:
+            if prime(int(num)):
+                ans += 1
+    return ans
