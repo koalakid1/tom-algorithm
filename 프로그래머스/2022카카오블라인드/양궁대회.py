@@ -19,13 +19,7 @@ def solution(n, info):
         if max_value < diff_score:
             max_value = diff_score
             max_count = count
-        elif max_value == diff_score:
-            for i in range(10, -1, -1):
-                if max_count[i] > count[i]:
-                    max_count = count
-                    break
-                elif max_count[i] < count[i]:
-                    break
+
     if max_value > 0:
         for i in range(10, -1, -1):
             answer.append(max_count[i])
