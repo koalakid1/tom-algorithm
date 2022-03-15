@@ -24,21 +24,24 @@ def eratos(n):
 
 if __name__ == "__main__":
     n = int(input())
-    primes = eratos(n)
-    i, j = 0, 0
-    acc = primes[0]
-    answer = 0
-    while i <= j:
-        if acc < n:
-            j += 1
-            if j < len(primes):
-                acc += primes[j]
+    if n == 1:
+        print(0)
+    else:
+        primes = eratos(n)
+        i, j = 0, 0
+        acc = primes[0]
+        answer = 0
+        while i <= j:
+            if acc < n:
+                j += 1
+                if j < len(primes):
+                    acc += primes[j]
+                else:
+                    break
             else:
-                break
-        else:
-            if acc == n:
-                answer += 1
-            acc -= primes[i]
-            i += 1
+                if acc == n:
+                    answer += 1
+                acc -= primes[i]
+                i += 1
 
-    print(answer)
+        print(answer)
